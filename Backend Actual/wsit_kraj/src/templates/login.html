@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="../static/styles/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+
+    <link rel="stylesheet" href="../static/styles/css/mojcss_boostrap.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/CSSregistracija.css') }}">
+    <title>Dodaj Proizvod</title>
+    <style>
+        .dugme
+        {
+            color: #FFFFFF;
+            text-align: center;
+            background: #120638;
+            border-radius: 0px;
+            padding: 9px 32px 6px;
+            margin-top: 5px;
+            font-family: "HelveticaNeueLTPro Md","Helvetica Neue LT Pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            font-size: 16px;
+            border: none;
+        }
+
+        @media(max-width: 1010px){
+            
+            #malo{
+                display: none;
+            }
+           
+        }
+    
+    </style>
+</head>
+
+    <body>
+
+
+        <div class="container-fluid mt-5">
+            <div class="container" style="width: 80%; margin: 0 auto;">
+                <div class="row">
+                    <div class="col-lg-12 col-md-10 col-sm-10">
+                        <div class="row ">
+                            <div class="col-lg-9 col-9 offset-lg-3 offset-md-3 offset-sm-3 offset-3 ">
+                                <h2 class="mb-3"> <strong>Login</strong>  </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-2  offset-lg-3 offset-md-3 offset-sm-3 offset-3">
+                                <form action="/login" method="POST" enctype="multipart/form-data">
+                                
+                                        
+                                                
+                                    <p id="username" class="mb-4">Username: </p>
+                                    <p id="majkobozija" class="mb-4">Password: </p>
+                                 
+                                                                                
+                                        
+                            </div>        
+                            
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-7">
+                                
+                                    <p><input type="text"  style="border: 1px solid #e1502d;" name="username"></p>
+                                    <p><input type="password"  style="border: 1px solid #e1502d;" name="password"></p>
+
+                                   
+                                    
+                                </form>
+                                <form action="/register">
+                                    <p id="majkobozija"><input class="dugme" type="submit" class="dugme" name="Dodaj Novi" value="Registruj se"></p>
+                                </form>
+                            </div>
+                            
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+</body>
+</html>

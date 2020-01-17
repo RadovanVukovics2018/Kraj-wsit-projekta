@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .dugme
+        {
+            color: #FFFFFF;
+            text-align: center;
+            background: #120638;
+            border-radius: 0px;
+            padding: 9px 32px 6px;
+            margin-top: 5px;
+            font-family: "HelveticaNeueLTPro Md","Helvetica Neue LT Pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            font-size: 16px;
+            border: none;
+        }
+    
+    </style>
+</head>
+<body>
+    <div style="margin-left: 30%; margin-top: 100px; border: 5px dotted #e1502d; width: 33%; padding: 20px;">
+        {% for k in korisnici %}
+        {% if k["_id"] == x %}
+        <h2>Username: {{k['username']}}</h2>
+        <h4>Email: {{k['email']}}</h4>
+        <h4>Trenutni balans: {{k['balans']}}</h4>
+        <img src="{{k['picture_url']}}" style="width: 200px; height: 150px;">
+        {% endif %}
+        {% endfor %}
+            <h4>Da li želite da obrišete ovaj korisnički nalog? </h4>
+            <h4><strong><em>Napomena: Ukoliko obrišete nalog, neće biti moguće povratiti preostali balans.</em></strong></h4>
+            <form action="/delete/{{x}}" method="POST" enctype="multipart/form-data">
+            
+                    <input type="submit" class="dugme" value="Obriši korisnika">
+            </form>
+
+    </div>       
+</body>
+
+</html>

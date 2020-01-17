@@ -1,0 +1,36 @@
+
+
+#majebisekretenu form{
+    height:100%;
+    
+    width:100%;
+}
+#majebisekretenu form p
+{
+    margin-bottom: 30px;
+}
+#majebisekretenu form input
+{
+    margin-top:10px;
+    height:25px;
+}
+
+#majebisekretenu #username
+{
+    margin-top:10px;
+}
+#majebisekretenu #godina
+{
+    margin-top:44px;
+}
+#majebisekretenu #majkobozija input[type=submit]
+{
+    margin-top:20%;
+    margin-left:40%;
+    width:50%;
+    height:15%;
+}
+#konteiner7
+{
+    background-color: black;
+}

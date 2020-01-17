@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="../static/styles/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+
+    <link rel="stylesheet" href="../static/styles/css/mojcss_boostrap.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/CSSregistracija.css') }}">
+
+    
+
+    <title>Prodaja IT komponenata</title>
+
+
+    <style>
+        .dugme
+        {
+            color: #FFFFFF;
+            text-align: center;
+            background: #120638;
+            border-radius: 0px;
+            padding: 9px 32px 6px;
+            margin-top: 5px;
+            font-family: "HelveticaNeueLTPro Md","Helvetica Neue LT Pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            font-size: 16px;
+            border: none;
+        }
+
+        @media(max-width: 792px){
+            p{
+                font-size: 14px;
+            }
+            #malo{
+                display: none;
+            }
+            h2{
+                font-size: 24px;
+            }
+        }
+
+        #konteiner7
+        {
+            background-color: black;
+        }
+        
+    </style>
+
+    <!-- Danilo, ostavicu ti neke komentare da se lakse snadjes! Ovo iznad je linkovanje sa boostrapom, fontawesome za fejsbuk ikonice instagram itd.. jedan link je za ikonicu pored titla na stranici i to je to u principu
+     -->
+    
+</head>
+<body>
+
+    <div class="row"> <!-- ovaj div je za responsive navbar koji se prikazuje kad smanjis ekran, kad kliknes na hamburger
+    meni ispadne par polja kao npr O nama, Proizvodi... ako hoces da dodajes nesto u 42 liniji koda dodajes, videces i sam -->   
+        <div class=" col-xs-12 col-12 container-fluid d-none d-block d-md-block d-sm-block d-xs-block d-lg-none" id="nav-posebna">
+            <div class="container mx-auto">
+                    <div class="row">
+                        <div class="col-md-8 col-8 col-sm-8 col-xs-6 mx-auto" id="slika_posebna">
+                            <img src="/static/img/logo2.png" alt="logo">
+                        </div>
+                        <div class="col-md-1  col-1 col-sm-1 col-xs-1" id="dugmePretragaNavPosebna">
+                            <a href="#"><i class="fas fa-search"></i></a>
+                        </div>
+                        <div class="col-md-1 col-1 col-sm-1 col-xs-1 mr-5 ">
+                        
+                            <button id="meniDugme" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                                class="fas fa-bars fa-1x"></i></span></button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                <a id="meniBoja" class="nav-link" href="#">O nama</a>
+                                </li>
+                                <li class="nav-item">
+                                <a id="meniBoja" class="nav-link" href="#">Proizvodi</a>
+                                </li>
+                                <li class="nav-item">
+                                <a id="meniBoja" class="nav-link" href="#">Kontakt</a>
+                                </li>
+                                <li class="nav-item">
+                                <a id="meniBoja" class="nav-link" href="#">Registracija</a>
+                                </li>
+                                <li class="nav-item">
+                                <a id="meniBoja" class="nav-link" href="#">Login</a>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>       
+        </div>
+    </div>
+
+    
+
+
+    <div class="row"> <!-- 
+        ovaj div je u principu navigacija sa ikonicama drustvenih mreza, pojavljuju se samo na ekranima vecim od 992px
+     -->
+        <div class="col-lg-12 p-0">
+            <div class="container-fluid d-none d-lg-block" id="navGore" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="navGornja">
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-rss"></i></a></li>
+                                    <li><a href="#"><strong>d</strong></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>   
+    <div class="row"><!-- ovo ovde je glavni meni gde se nalazi logo i stavke kao sto su O nama, Proizvodi, Kontakt... u 110 liniji 
+    koda ih dodajes vidis i sam vrv -->
+        <div class="col-lg-12">
+            <div class="container-fluid d-none d-lg-block" id="konteinerNav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-2">
+                            <div id="logo">
+                                <a href="/index"><img src="../static/styles/images/logo.png" alt=logo></a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-12" id="divNav">
+                                    <div id="navGlavna">
+                                        <ul>
+                                            <li><a href="/oNama">O nama</a></li>
+                                            <li><a href="/kontakt">Kontakt</a></li>
+                                            <li><a href="/register">Registracija</a></li>
+                                       
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"> <!-- Ovo je jos jedan nav meni gde se prikazuju popularne stavke  -->
+                                <div class="col-lg-12 d-none d-xl-block">
+                                    <div id="navpopularno">
+                                        <ul>
+                                            <li id="li_popularno"><h1>POPULARNO:</h1></li>
+                                            <li><a href="/indexProcesori">Procesori</a></li>
+                                            <li><a href="/indexGraficke">Graficke kartice</a></li>
+                                            <li><a href="/indexMaticne">Maticne ploce</a></li>
+                                            <li><a href="/indexRacunari">Gotovi racunari</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="row col-lg-3 offset-lg-3 offset-md-3 offset-sm-3 offset-3  pl-0">
+                        <h2 class="mb-3"> <strong>Registracija </strong>  </h2>
+                        </div>
+                        <form action="/register" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                    <div class="ml-auto col-lg-3 col-md-3 col-sm-3 col-3">
+                                            
+                                            <p id="username" class="mb-4">Username: </p>
+                                            <p id="majkobozija" class="mb-4">Password: </p>
+                                            <p id="majkobozija">Confirm <span id="malo">password</span>: </p>
+                                            <p id="majkobozija" class="mb-3">Pol: </p>
+                                            <p id="godina">Godina <span id="malo">rodjenja </span>: </p>
+                                            <p id="godina" class="mb-4">Email: </p>
+                                            <p id="godina" class="mb-4">Ime: </p>
+                                            <p id="godina" class="mb-3">Prezime: </p>
+                                            <p id="godina" class="mb-3">Adresa: </p>
+                                            <p id="godina" class="mb-4">Broj <span id="malo">telefona </span>: </p>
+                                            <p id="majkobozija">Ubaci sliku: </p>
+                                            
+
+                                    </div>
+                          
+                                    <div class="mr-auto col-lg-7 col-md-3 col-sm-3 col-7">
+                                            <p><input type="text" style="border: 1px solid #e1502d;"  name="username"></p>
+                                            <p><input type="password"  style="border: 1px solid #e1502d;" name="password"></p>
+                                            <p><input type="password" style="border: 1px solid #e1502d;"  name="confirm" ></p>
+                                            <p> M <input type="radio" style="border: 1px solid #e1502d;"  name="pol" value="M"> Z <input type="radio" name="pol" value="Z"></p>
+                                            <p><input type="text"  style="border: 1px solid #e1502d;" name="datum"></p>
+                                            <p><input type="email"  style="border: 1px solid #e1502d;" name="email"></p>
+                                            <p><input type="text"  style="border: 1px solid #e1502d;" name="ime"></p>
+                                            <p><input type="text" style="border: 1px solid #e1502d;"  name="prezime"></p>
+                                            <p><input type="text"  style="border: 1px solid #e1502d;" name="adresa"></p>
+                                            <p><input type="number"  style="border: 1px solid #e1502d;" name="broj"></p>
+                                            <p><input type="file" style="background-color: #e1502d; color: white;" name="slika"></p>
+                                            <p id="majkobozija"><input class="dugme" type="submit" value="Registruj se"></p>
+                                           
+                                    </div>
+                                   
+                            </div>
+                            
+                            
+                        </form>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+    <div class="row"> <!-- ovo je pocetak futera, ovde cemo stavljati neke precice ka drugim stranicama, dodaj ako mislis da nesto fali -->
+        <div class="col-lg-12 pr-0" id="konteiner6">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row mt-4 mb-4 col-lg-12 col-md-10 mx-auto"> <!-- ispod ovog diva ces dodavati ako fali nesto, pazi samo vidis da je svaka stavka u jednom divu, nemoj da ga zaboravis  -->
+                        <div class="col-lg-2 col-md-4 col-sm-3 navFuter">
+                            <h2>IT komponente</h2>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4  navFuter">
+                            <h2>Pomoc</h2>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4  col-sm-5 navFuter">
+                            <h2>Korisnička pravila</h2>
+
+                        </div>
+                        <div class="col-lg-4 col-md-12 d-none d-sm-block mx-auto" id="futerLinkovi">
+                            <a href="#"><i class="fas fa-rss"></i></a>
+                            <a href="#">d</a></li>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row"> <!-- ovo je drugi deo futera, ako negde zapnes cimaj me na wa   -->
+        <div class="col-lg-12" id="konteiner7">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row mt-4 col-lg-12 col-md-10 mx-auto">
+                        <div class="col-lg-2 col-md-2 " id="futer1">
+                            <h1>O nama</h1>
+                            <div class="d-none d-md-block">
+                                <p>O nama</p>
+                                <p>Kako da nas nadjete</p>
+                                <p>Kontakt</p>
+                                <p>Uslovi koriscenja</p>
+                                <p>Politika kolačića</p>
+                                
+                            </div>    
+                        </div>
+                        <div class="col-lg-2 col-md-2" id="futer2">
+                            <h1>Naše prodavnice</h1>
+                            <div class="d-none d-md-block">
+                                <p>Makedonska 6, Beograd</p>
+                                <p>Bele Bartoka 23, Nis</p>
+                                <p>Ustanicka 42, Beograd</p>
+                                <p>Ivana Ljubicica 14, Novi Sad</p>
+                                <p>Srpskih vitezova 4, Krusevac</p>
+                                <p>Janka Pantelica 34b, Kraljevo</p>
+                            
+                            </div>   
+                        </div>
+                        <div class="col-lg-4 col-md-4" id="futer3">
+                            <h1>Nase drustvene mreze</h1>
+                            <div class="d-none d-md-block">
+                                <p>Facebook</p>
+                                <p>Youtube</p>
+                                <p>Instagram</p>
+                                <p>Twitter</p>
+                            </div> 
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-3 col-3" id="futer4">
+                            <img src="../static/styles/images/logo2.png">
+                            <div class="d-none d-md-block">
+                                <p>© 2020 Prodaja IT komponenti. Sva prava zadrzana</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

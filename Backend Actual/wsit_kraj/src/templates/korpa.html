@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="/static/styles/images/logo.png">
+    <link rel="stylesheet" href="../static/styles/css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/styles/css/vesti.css">
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+
+    <link rel="stylesheet" href="../static/styles/css/mojcss_boostrap.css">
+    <title>{{korisnik["username"]}}</title>
+
+    <style>
+        .dugme
+        {
+            color: #FFFFFF;
+            text-align: center;
+            background: #120638;
+            border-radius: 0px;
+            padding: 9px 32px 6px;
+            margin-top: 5px;
+            font-family: "HelveticaNeueLTPro Md","Helvetica Neue LT Pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            font-size: 16px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="row"> <!-- ovaj div je za responsive navbar koji se prikazuje kad smanjis ekran, kad kliknes na hamburger
+        meni ispadne par polja kao npr O nama, Proizvodi... ako hoces da dodajes nesto u 42 liniji koda dodajes, videces i sam -->   
+            <div class=" col-xs-12 col-12 container-fluid d-none d-block d-md-block d-sm-block d-xs-block d-lg-none" id="nav-posebna">
+                <div class="container mx-auto">
+                        <div class="row">
+                            <div class="col-md-8 col-8 col-sm-8 col-xs-6 mx-auto" id="slika_posebna">
+                                <img src="/static/styles/images/logo2.png" alt="logo">
+                            </div>
+                            <div class="col-md-1  col-1 col-sm-1 col-xs-1" id="dugmePretragaNavPosebna">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="col-md-1 col-1 col-sm-1 col-xs-1 mr-5 ">
+                            
+                                <button id="meniDugme" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                                    class="fas fa-bars fa-1x"></i></span></button>
+    
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                    <a id="meniBoja" class="nav-link" href="#">O nama</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a id="meniBoja" class="nav-link" href="#">Proizvodi</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a id="meniBoja" class="nav-link" href="#">Kontakt</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a id="meniBoja" class="nav-link" href="#">Registracija</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a id="meniBoja" class="nav-link" href="#">Login</a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                </div>       
+            </div>
+        </div>
+    
+    
+        <div class="row"> <!-- 
+            ovaj div je u principu navigacija sa ikonicama drustvenih mreza, pojavljuju se samo na ekranima vecim od 992px
+         -->
+            <div class="col-lg-12 p-0">
+                <div class="container-fluid d-none d-lg-block" id="navGore" >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="navGornja">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-rss"></i></a></li>
+                                        <li><a href="#"><strong>d</strong></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>   
+        <div class="row"><!-- ovo ovde je glavni meni gde se nalazi logo i stavke kao sto su O nama, Proizvodi, Kontakt... u 110 liniji 
+        koda ih dodajes vidis i sam vrv -->
+            <div class="col-lg-12">
+                <div class="container-fluid d-none d-lg-block" id="konteinerNav">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-2">
+                                <div id="logo">
+                                    <a href="/index"><img src="/static/styles/images/logo.png" alt=logo></a>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-12" id="divNav">
+                                        <div id="navGlavna">
+                                            <ul>
+                                                <li><a href="/oNama">O nama</a></li>
+                                                <li><a href="/kontakt">Kontakt</a></li>
+                                                <li><a href="/register">Registracija</a></li>
+                                           
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"> <!-- Ovo je jos jedan nav meni gde se prikazuju popularne stavke  -->
+                                    <div class="col-lg-12 d-none d-xl-block">
+                                        <div id="navpopularno">
+                                            <ul>
+                                                <li id="li_popularno"><h1>POPULARNO:</h1></li>
+                                                <li><a href="/indexProcesori">Procesori</a></li>
+                                                <li><a href="/indexGraficke">Graficke kartice</a></li>
+                                                <li><a href="/indexMaticne">Maticne ploce</a></li>
+                                                <li><a href="/indexRacunari">Gotovi racunari</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3 mt-4 mb-4" >
+                        <h1>Korisničko ime: {{korisnik["username"]}}</h1>
+                        <p> <strong>Ime: </strong>{{korisnik["ime"]}}</p>
+                        <p><strong>Prezime:</strong> {{korisnik["prezime"]}}</p>
+                        <p><strong>Email adresa:</strong> {{korisnik["email"]}}</p>
+                        <p><strong>Broj telefona:</strong>{{korisnik["brojTelefona"]}}</p>
+                        <p><strong>Adresa:</strong> {{korisnik["adresa"]}}</p>
+                        <p><strong>Trenutni balans:</strong> {{korisnik["balans"]}} din</p>
+                        
+                        <table class="mb-4">
+                            <tr>
+                                <th style="color: #333;">Naziv</th>
+                                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                <th style="color: #333;">Cena</th>
+                            </tr>
+                            {% for p in korpa %}
+                                <tr>
+                                    <td style="color: #e1502d;">{{p['naziv']}}</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                    <td style="font-weight: bold;">{{p['cena']}} din</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                            <tr>
+                                <td><strong>Total:</strong> <span style="color: #e1502d;">{{total}} din</span></td>
+                            </tr>
+                            <br>
+                            <br>
+                            <tr>
+                                <td>
+                                    <form action="/izvrsiKupovinu" method="POST">
+                                        <input type="submit" value="Kupi" class="dugme">
+                                    </form>
+                                  
+                                    <form action="/brisiIzKorpe" method="POST">
+                                        <input type="submit" value="Isprazni korpu" class="dugme">
+                                    </form>
+                                </td>
+                            </tr>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+
+    <div class="row"> <!-- ovo je pocetak futera, ovde cemo stavljati neke precice ka drugim stranicama, dodaj ako mislis da nesto fali -->
+        <div class="col-lg-12 pr-0" id="konteiner6">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row mt-4 mb-4 col-lg-12 col-md-10 mx-auto"> <!-- ispod ovog diva ces dodavati ako fali nesto, pazi samo vidis da je svaka stavka u jednom divu, nemoj da ga zaboravis  -->
+                        <div class="col-lg-2 col-md-4 col-sm-3 navFuter">
+                            <h2>IT komponente</h2>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4  navFuter">
+                            <h2>Pomoc</h2>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4  col-sm-5 navFuter">
+                            <h2>Korisnička pravila</h2>
+
+                        </div>
+                        <div class="col-lg-4 col-md-12 d-none d-sm-block mx-auto" id="futerLinkovi">
+                            <a href="#"><i class="fas fa-rss"></i></a>
+                            <a href="#">d</a></li>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row"> <!-- ovo je drugi deo futera, ako negde zapnes cimaj me na wa   -->
+        <div class="col-lg-12" id="konteiner7" style="background-color: black;">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row mt-4 col-lg-12 col-md-10 mx-auto">
+                        <div class="col-lg-2 col-md-2 " id="futer1">
+                            <h1>O nama</h1>
+                            <div class="d-none d-md-block">
+                                <p>O nama</p>
+                                <p>Kako da nas nadjete</p>
+                                <p>Kontakt</p>
+                                <p>Uslovi koriscenja</p>
+                                <p>Politika kolačića</p>
+                                
+                            </div>    
+                        </div>
+                        <div class="col-lg-2 col-md-2" id="futer2">
+                            <h1>Naše prodavnice</h1>
+                            <div class="d-none d-md-block">
+                                <p>Makedonska 6, Beograd</p>
+                                <p>Bele Bartoka 23, Nis</p>
+                                <p>Ustanicka 42, Beograd</p>
+                                <p>Ivana Ljubicica 14, Novi Sad</p>
+                                <p>Srpskih vitezova 4, Krusevac</p>
+                                <p>Janka Pantelica 34b, Kraljevo</p>
+                            
+                            </div>   
+                        </div>
+                        <div class="col-lg-4 col-md-4" id="futer3">
+                            <h1>Nase drustvene mreze</h1>
+                            <div class="d-none d-md-block">
+                                <p>Facebook</p>
+                                <p>Youtube</p>
+                                <p>Instagram</p>
+                                <p>Twitter</p>
+                            </div> 
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-3 col-3" id="futer4">
+                            <img src="/static/img/logo2.png">
+                            <div class="d-none d-md-block">
+                                <p>© 2020 Prodaja IT komponenti. Sva prava zadrzana</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+*
+{
+    font-family: "Helvetica Neue LT Pro",
+"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.container-fluid
+{
+    padding: 0px;
+}
+#navGore
+{
+    background-color: #f2f2f2;
+}
+#navGornja2
+{
+    width: 100%;
+    background-color: #f2f2f2;
+}
+#navGornja
+{
+    margin: 0 auto;
+    padding: 0;
+    height: 27.8px;
+    background-color: #f2f2f2;
+}
+#navGornja ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#navGornja ul li
+{
+    float: right;
+    width: 23px;
+    text-align: center;
+    vertical-align: bottom;
+}
+#navGornja ul li a
+{
+    display: block;
+    text-decoration: none;
+    
+}
+#navGornja ul li a
+{
+    padding-top: 4px;
+    height: 18px;
+    color: #787976;
+}
+.container
+{
+    max-width: 1140px;
+}
+#logo img
+{
+    width: 250px;
+    height: 100px;
+}
+#logo
+{
+    margin-top: 10px;  
+    margin-bottom: 2px; 
+}
+#navGlavna
+{
+    float: left;
+    text-align: center;
+}
+#navGlavna ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+#navGlavna ul li
+{
+    float: left;
+    height: 40px;
+    margin-right:20px;
+}
+#navGlavna ul li a
+{
+    display: block;
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    padding-top: 45px;
+}
+#navGlavna ul li a:hover
+{
+    color: #cfac0e;
+}
+#navGlavna ul li a img
+{
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+#nav-posebna
+{
+    background-color: #e1502d;
+}
+#slika_posebna
+{
+    margin: 10px;
+}
+#slika_posebna img
+{
+    width: 85px;
+    height: 55px;
+}
+#dugmePretragaNavPosebna a
+{
+    background: #f6f6f6;
+    border-radius: 50%;
+    color: #000000;
+    padding: 7px 8px 6px;
+}
+#dugmePretragaNavPosebna
+{
+    margin-top: 25px;
+}
+.fa-1x {
+    font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+#meniDugme
+{
+    color: white;
+    margin-top: 20px;
+}
+#meniBoja
+{
+    color: white;
+}
+#navpopularno
+{
+    
+    height: 10px;
+    border-top: 1px solid grey;
+    vertical-align: top;
+    padding: 2px;
+    padding-left:0px;
+    margin: 0px;
+    margin-bottom: 10px;
+
+}
+#navpopularno ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#navpopularno ul li
+{
+    float: left;
+    width: 10%;
+}
+#navpopularno ul li a
+{
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    color: grey;
+}
+#navpopularno li h1
+{
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
+    color: grey;
+    font-weight: bold;
+}
+#divNav
+{
+    height: 80px;
+}
+#li_popularno
+{
+    margin-right: 0px;
+}
+#konteinerNav
+{
+    border-bottom: 3px solid #e1502d;;
+}
+#containermain
+{
+    background-color:gray;
+}   
+#belapozadina
+{
+    background-color:white;
+}
+#poz1
+{
+    background-color: green;
+}
+#poz2
+{
+    background-color: greenyellow;
+}
+#poz3
+{
+    background-color: hotpink;
+}
+
+
+.navFuter h2
+{
+    color: #9b9b9b;
+    font-size: 18px;
+    font-weight: bold;
+}
+#konteiner6
+{
+    border-top: 3px solid #e1502d;;
+    background-color: #222525;
+}
+#futerLinkovi a
+{
+    color: #9b9b9b;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+#futer1 h1
+{
+    font-size: 18px;
+    color: #9b9b9b;
+    font-weight: bold;
+}
+#futer2 h1
+{
+    font-size: 18px;
+    color: #9b9b9b;
+    font-weight: bold;
+}
+#futer3 h1
+{
+    font-size: 18px;
+    color: #9b9b9b;
+    font-weight: bold;
+}
+#futer1 p
+{
+    font-size: 12px;
+    color: #666;
+}
+#futer2 p
+{
+    font-size: 12px;
+    color: #666;
+}
+#futer3 p
+{
+    font-size: 12px;
+    color: #666;
+}
+#futer4 p
+{
+    font-size: 12px;
+    color: #666;
+}
+#futer4
+{
+    text-align: right;
+}
+.dugme
+{
+    color: #FFFFFF;
+    text-align: center;
+    background: #120638;
+    border-radius: 0px;
+    padding: 19px 42px 16px;
+    margin-top: 10px;
+    font-family: "HelveticaNeueLTPro Md","Helvetica Neue LT Pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-size: 18px;
+    border: none;
+}
+#konteiner7
+{
+    background-color: black;
+}

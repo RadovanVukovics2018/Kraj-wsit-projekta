@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% for p in proizvodi %}
+    {% if p["tipProizvoda"] == "GPU" %}
+        <p><img src="{{p['slika']}}"></p>
+        <p><a href="grafickeKartice/{{p['_id']}}">{{p['naziv']}}</a></p>
+        <p>Cena: {{p['cena']}}</p>
+        <p>Količina: {{p['kolicina']}}</p>
+        
+    {% if k["tipKorisnika"] == "Prodavac" %}
+            <form action="/update/{{p['_id']}}" method="GET" enctype="multipart/form-data">
+                    <input type="submit" value="Update">
+            </form>
+        {% endif %}
+       
+    
+        
+    {% endif %}
+    {% endfor %}
+    
+    
+</body>
+</html>
